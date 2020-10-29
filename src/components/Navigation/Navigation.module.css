@@ -1,0 +1,52 @@
+.Nav {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: #606061;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  animation: entrance 1s ease-out;
+}
+
+.Navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.Navigation ul {
+  list-style: none;
+}
+.Navigation ul li {
+  font-size: 200%;
+  margin: 10px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.Navigation ul li:hover {
+  background-color: #25262b;
+}
+.Navigation ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.Close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 180%;
+}
+
+@keyframes entrance {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

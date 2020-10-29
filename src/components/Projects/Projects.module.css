@@ -1,0 +1,14 @@
+.ProjectsContent {
+  grid-row: 4 / span 1;
+  grid-column: 1 / -1;
+}
+
+.ProjectsContent h2 {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+.Projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

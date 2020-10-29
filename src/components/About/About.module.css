@@ -1,0 +1,138 @@
+.About {
+  grid-row: 3 / span 1;
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.About h2 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+  align-self: center;
+  font-size: 35px;
+}
+
+.Content {
+  grid-row: 2 / span 3;
+  grid-column: 2 / span 6;
+
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 1fr));
+}
+
+.Left {
+  grid-row: 1 / -1;
+  grid-column: 1 / span 1;
+  justify-self: center;
+}
+.Right {
+  grid-row: 1 / -1;
+  grid-column: 3 / span 4;
+  align-self: center;
+
+  background-color: #25262b;
+  padding: 20px;
+}
+
+.Item {
+  width: 265px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.Icon {
+  font-size: 250%;
+}
+.IconXd {
+  height: 45%;
+  width: auto;
+}
+.Right h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.Right p {
+  font-size: 22px;
+  color: #8c8d91;
+}
+.Right p span {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .Content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .Left {
+    display: flex;
+  }
+  .Right {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .Right p {
+    font-size: 18px;
+  }
+}
+
+/* @media screen and (max-width: 1120px) {
+  .Content {
+    grid-row: 2 / span 3;
+    grid-column: 1 / span 5;
+  }
+  .Right {
+    width: 100%;
+    grid-row: 1 / -1;
+    grid-column: 2 / span 4;
+    align-self: center;
+  }
+  .Right p {
+    font-size: 18px;
+    color: #8c8d91;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .Content {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .Right {
+    width: 80%;
+    grid-row: 1 / span 1;
+    grid-column: 1;
+    justify-self: center;
+    padding: 0;
+  }
+  .Left {
+    grid-row: 2 / span 1;
+    grid-column: 1;
+    display: flex;
+  }
+  .IconXd {
+    height: 25%;
+    width: auto;
+  }
+
+  .Item {
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .Icon {
+    font-size: 250%;
+  }
+} */

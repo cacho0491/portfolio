@@ -1,0 +1,84 @@
+.Welcome {
+  grid-row: 2 / span 1;
+  grid-column: 1 / -1;
+  height: 90vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.LeftPanel {
+  margin-top: -100px;
+  /* position: absolute;
+  top: 234px;
+  left: 68px; */
+}
+
+.HeroMainText {
+  font-size: 350%;
+  margin: 7% 0;
+}
+.HeroSubText {
+  color: #707070;
+  font-size: 24px;
+}
+
+.RightPanel {
+  width: 50%;
+  height: 50%;
+
+  border: none;
+  border-radius: 50%;
+  background-image: url(../../assests/hero-img.jpg);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen;
+}
+
+/* @media only screen and (max-width: 1130px) {
+  .Welcome {
+    width: 100%;
+  }
+  .RightPanel {
+    width: 50%;
+    height: 50%;
+  }
+  .HeroMainText {
+    font-size: 250%;
+    margin: 0;
+  }
+  .HeroSubText {
+    font-size: 80%;
+  }
+} */
+@media only screen and (max-width: 768px) {
+  .Welcome {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../../assests/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .RightPanel {
+    display: none;
+  }
+}
+
+/* @media screen and (max-width: 1200px) {
+  .Welcome {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 9;
+  }
+  .RightPanel {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .Welcome {
+    height: 100vh;
+  }
+} */

@@ -1,0 +1,17 @@
+.Footer {
+  grid-row: 6 / span 1;
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Icon {
+  font-size: 200%;
+  margin-right: 10px;
+}
+.Footer div a {
+  text-decoration: none;
+  color: white;
+}

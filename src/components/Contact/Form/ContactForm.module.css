@@ -1,0 +1,39 @@
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.ContactForm label:not(:first-child) {
+  margin-top: 20px;
+}
+
+.Input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid grey;
+
+  margin-top: 10px;
+  outline: none;
+  color: #fff;
+}
+
+.SendButton {
+  width: 125px;
+  height: 45px;
+  border: 1px solid #fff;
+  background: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+.SendButton:hover {
+  transform: scale(1.1);
+}
+
+.ErrorMessage {
+  font-size: 60%;
+  color: orangered;
+}

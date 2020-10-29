@@ -1,0 +1,70 @@
+.Contact {
+  grid-row: 5 / span 1;
+  grid-column: 1 / -1;
+
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.Contact h2 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+  font-size: 35px;
+}
+
+.ContactContent {
+  grid-row: 2 / span 4;
+  grid-column: 2 / span 6;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.ContactInfo {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+}
+.ContactInfo h5 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.ContactInfo p {
+  color: #707070;
+}
+
+.ContactForm {
+  grid-row: 2 / -1;
+  grid-column: 4 / -1;
+}
+.Line {
+  grid-row: 2 / -1;
+  grid-column: 3 / span 1;
+  justify-self: center;
+  height: 80%;
+  border: 1px dashed #707070;
+}
+
+@media only screen and (max-width: 425px) {
+  .Contact {
+    margin-top: 40px;
+  }
+  .ContactContent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .ContactForm {
+    margin: 20px auto;
+  }
+  .ContactInfo p {
+    text-align: center;
+  }
+  .ContactInfo h5 {
+    display: none;
+  }
+  .Line {
+    display: none;
+  }
+}
