@@ -2,7 +2,7 @@ import React from "react";
 
 import classes from "./About.module.css";
 import { FaReact } from "react-icons/fa";
-import { SiJavascript, SiRedux } from "react-icons/si";
+import { SiRedux, SiGatsby } from "react-icons/si";
 import Xs from "../../assests/xs.svg";
 
 const about = () => {
@@ -16,11 +16,8 @@ const about = () => {
             <p>React</p>
           </div>
           <div className={classes.Item}>
-            <SiJavascript
-              className={classes.Icon}
-              style={{ color: "#F7DF1E" }}
-            />
-            <p>JavasScript</p>
+            <SiGatsby className={classes.Icon} style={{ color: "#F7DF1E" }} />
+            <p>Gatsby JS</p>
           </div>
           <div className={classes.Item}>
             <SiRedux className={classes.Icon} style={{ color: "#764ABC" }} />

@@ -8,10 +8,22 @@ import niflix from "../../assests/Projects/niflix.png";
 import myrecipes from "../../assests/Projects/my-recipes.png";
 import todo from "../../assests/Projects/todo.png";
 import beach from "../../assests/Projects/beach-resort.png";
+import michiChef from "../../assests/Projects/michiChef.png";
+import football from "../../assests/Projects/football.png";
 
 import tonote from "../../assests/Projects/tonote.png";
 
 const projectsList = [
+  {
+    name: "michiChef",
+    img: michiChef,
+    website: "https://cranky-darwin-24effd.netlify.app/",
+  },
+  {
+    name: "Football Club",
+    img: football,
+    website: "https://sad-engelbart-d21b2c.netlify.app/",
+  },
   {
     name: "Chatme",
     img: chatme,
