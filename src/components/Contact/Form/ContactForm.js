@@ -26,6 +26,14 @@ const validate = (values) => {
 };
 
 const ContactForm = () => {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -33,15 +41,26 @@ const ContactForm = () => {
       message: "",
     },
     validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (e) => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...e }),
+      })
+        .then(() => alert("Success!"))
+        .catch((error) => alert(error));
+
+      e.preventDefault();
     },
   });
   return (
     <form
       onSubmit={formik.handleSubmit}
       className={classes.ContactForm}
+      method="post"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      name="contact"
     >
       <label htmlFor="name">Name</label>
       <input
@@ -82,6 +101,7 @@ const ContactForm = () => {
       {formik.touched.message && formik.errors.message ? (
         <div className={classes.ErrorMessage}>{formik.errors.message}</div>
       ) : null}
+      <input type="hidden" name="form-name" value="contact" />
       <button type="submit" className={classes.SendButton}>
         SEND
       </button>
