@@ -54,13 +54,7 @@ const ContactForm = () => {
     },
   });
   return (
-    <form
-      onSubmit={formik.handleSubmit}
-      className={classes.ContactForm}
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      name="contact"
-    >
+    <form onSubmit={formik.handleSubmit} className={classes.ContactForm}>
       <label htmlFor="name">Name</label>
       <input
         className={classes.Input}
@@ -100,7 +94,7 @@ const ContactForm = () => {
       {formik.touched.message && formik.errors.message ? (
         <div className={classes.ErrorMessage}>{formik.errors.message}</div>
       ) : null}
-      <input type="hidden" name="form-name" value="contact" />
+
       <button type="submit" className={classes.SendButton}>
         SEND
       </button>
