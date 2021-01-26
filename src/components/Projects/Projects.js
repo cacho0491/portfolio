@@ -74,6 +74,7 @@ const projects = () => {
         {projectsList.map((project) => {
           return (
             <Project
+              key={project.name}
               viewProject={project.website}
               name={project.name}
               image={project.img}

@@ -42,13 +42,15 @@ const ContactForm = () => {
     },
     validate,
     onSubmit: (e) => {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...e }),
-      })
-        .then(() => alert("Success!"))
-        .catch((error) => alert(error));
+      // fetch("/", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //   body: encode({ "form-name": "contact", ...e }),
+      // })
+      //   .then(() => alert("Success!"))
+      //   .catch((error) => alert(error));
+      console.log(e);
+      console.log(encode({ "form-name": "contact", ...e }));
 
       e.preventDefault();
     },
@@ -57,7 +59,6 @@ const ContactForm = () => {
     <form
       onSubmit={formik.handleSubmit}
       className={classes.ContactForm}
-      method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       name="contact"
