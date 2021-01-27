@@ -58,8 +58,19 @@ const ContactForm = () => {
     <form
       onSubmit={formik.handleSubmit}
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       className={classes.ContactForm}
+      action="/"
+      name="contact"
+      method="POST"
     >
+      <input type="hidden" name="form-name" value="contact" />
+      <div hidden>
+        <label>
+          Don’t fill this out:{" "}
+          <input name="bot-field" onChange={formik.handleChange} />
+        </label>
+      </div>
       <label htmlFor="name">Name</label>
       <input
         className={classes.Input}
