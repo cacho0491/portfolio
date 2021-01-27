@@ -13,7 +13,9 @@ const footer = () => {
           <AiFillGithub className={classes.Icon} />
         </a>
 
-        <AiFillLinkedin className={classes.Icon} />
+        <a href="https://www.linkedin.com/in/carlos-correac/">
+          <AiFillLinkedin className={classes.Icon} />
+        </a>
       </div>
     </footer>
   );

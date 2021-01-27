@@ -7,7 +7,10 @@ const header = (props) => {
   return (
     <div className={classes.Header}>
       <p>Carlos Correa</p>
-      <GiHamburgerMenu onClick={props.navButton} />
+      <GiHamburgerMenu
+        style={{ marginRight: "15px" }}
+        onClick={props.navButton}
+      />
     </div>
   );
 };
