@@ -65,12 +65,7 @@ const ContactForm = () => {
       method="POST"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <div hidden>
-        <label>
-          Don’t fill this out:{" "}
-          <input name="bot-field" onChange={formik.handleChange} />
-        </label>
-      </div>
+
       <label htmlFor="name">Name</label>
       <input
         className={classes.Input}
